@@ -47,14 +47,13 @@ h1, .page-title {
 a,
 a:visited {
   color: #000;            /* černá barva */
-  text-decoration: none;  /* bez podtržení, volitelné */
 }
 
 /* interakční stavy */
 a:hover,
 a:active {
   color: #111;            /* mírně tmavší při hover/active */
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /* důležité: zachovat přístupnost - viditelný focus pro klávesnici */
