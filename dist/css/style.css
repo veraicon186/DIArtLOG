@@ -43,9 +43,26 @@ h1, .page-title {
 
 }
 
-a {
-  color: black
+/* základní nastavení pro všechny odkazy */
+a,
+a:visited {
+  color: #000;            /* černá barva */
+  text-decoration: none;  /* bez podtržení, volitelné */
 }
+
+/* interakční stavy */
+a:hover,
+a:active {
+  color: #111;            /* mírně tmavší při hover/active */
+  text-decoration: underline;
+}
+
+/* důležité: zachovat přístupnost - viditelný focus pro klávesnici */
+a:focus {
+  outline: 3px solid Highlight; /* nebo jiný kontrastní styl */
+  outline-offset: 2px;
+}
+
 
 
 h2 {
