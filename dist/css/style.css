@@ -1,114 +1,116 @@
-/* Basic CSS Reset and Settings */
+/* Basic Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Common Breakpoints */
+:root {
+  --breakpoint-mobile: 0px;
+  --breakpoint-tablet: 600px;
+  --breakpoint-desktop: 1024px;
+  --breakpoint-large: 1440px;
 }
 
+/* Example usage:
+@media (min-width: 600px) { ... }   // Tablet
+@media (min-width: 1024px) { ... }  // Desktop
+@media (min-width: 1440px) { ... }  // Large screens
+*/
+
+/* Base Typography & Layout */
 html {
-    font-size: 16px;
-    scroll-behavior: smooth;
+  font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: Funnel Display, Arial, Helvetica, sans-serif;
-    background-color: #fff;
-    color: #000000;
-    line-height: 1.6;
+  font-family: "Funnel Display", Arial, Helvetica, sans-serif;
+  background: #fff;
+  color: #000;
+  line-height: 1.6;
 }
-.page-title {
+
+/* Headings */
+h1, .page-title {
   font-family: "Funnel Display", sans-serif;
-  font-size: 3rem;
+  font-size: 2.2rem;
+  font-weight: 700;
   text-align: center;
-   margin: 20px 0 0 0;
-}
-a {
-    color: inherit;
+  margin: 20px 0 10px;
 }
 
-
-h1 {
-    font-family: "Funnel Display", sans-serif;
-    margin: 20px 0 10px 0;
-    font-size: 3rem;
-    font-weight: 700;
-    text-align: center;
-}
-header a {
-    text-decoration: none;
+.page-title {
+  margin-top: 20px;
 }
 
 h2 {
-    font-family: "Funnel Display", sans-serif;
-    margin: 0;
-    font-size: 1.5rem;
-    font-weight: 300;
-    text-align: center;
-}
-h3 {
-    font-family: "Funnel Display", sans-serif;
-    margin: 20px 40px 0;
-    font-size: 1.2rem;
-    font-weight: 300;
-    text-align: left;
+  font-family: "Funnel Display", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 300;
+  text-align: center;
+  margin: 0;
 }
 
- .filters { 
-  margin: 50px 20px; 
-}
-.filters button { 
+h3 {
   font-family: "Funnel Display", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: left;
+  margin: 20px 0 0 0;
+  padding: 0 20px;
+}
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Filters */
+.filters {
+  margin: 30px 10px;
+  text-align: left;
+}
+
+.filters button {
+  font-family: "Funnel Display", sans-serif;
+  font-size: 13px;
   margin: 5px;
   padding: 10px 20px;
   border-radius: 9999px;
-  background-color: white;
-  border: 1px solid black;
-  cursor: pointer;              /* změní kurzor */
-  transition: all 0.3s ease;    /* animace při hoveru */
+  background: #fff;
+  border: 1px solid #000;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.filters button:hover {
-  background-color: black;
-  color: white;
-  transform: scale(1.05);       /* lehké zvětšení při hoveru */
+.filters button:hover,
+.filters button.active {
+  background: #000;
+  color: #fff;
+  transform: scale(1.05);
 }
 
 .filters button:active {
   transform: scale(0.95);
 }
 
-.filters button.active {
-  background-color: black;
-  color: white;
-}
-
-
+/* Gallery */
 .gallery {
-  column-count: 4;      /* desktop */
-  column-gap: 20px;     /* mezery mezi sloupci */
-  margin: 0 20px;
-}
-
-@media (max-width: 1024px) {
-  .gallery {
-    column-count: 2;    /* tablet */
-  }
-}
-
-@media (max-width: 600px) {
-  .gallery {
-    column-count: 1;    /* mobil */
-  }
+  column-count: 1;
+  column-gap: 16px;
+  margin: 0 10px;
 }
 
 .card {
-  display: inline-block; /* karty se chovají jako bloky uvnitř sloupce */
-  width: 100%;           /* vždy zaplní šířku sloupce */
-  margin: 0 0 20px;      /* mezera pod kartou */
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 16px;
   background: #fff;
   border-radius: 8px;
   text-align: left;
-  break-inside: avoid;   /* zabrání rozdělení karty mezi dva sloupce */
+  break-inside: avoid;
 }
 
 .card img,
@@ -118,58 +120,94 @@ h3 {
   display: block;
 }
 
-.hidden { display: none; }
+.hidden {
+  display: none;
+}
 
-
-/* --- PROFIL AUTORA --- */
-
-  .author-title {
-    font-family: "Funnel Display", sans-serif;
-    font-size: 2.5rem;
-    text-align: left;
-    margin: 40px;
-  }
+/* Author Profile */
+.author-title {
+  font-family: "Funnel Display", sans-serif;
+  font-size: 2rem;
+  text-align: left;
+  margin: 30px 10px 10px;
+}
 
 .author-profile {
   display: flex;
-  margin: 20px;
-
+  flex-direction: column;
+  margin: 10px;
 }
 
 .author-bio {
-  min-width: 400px;
-  padding: 20px;
+  min-width: 0;
+  padding: 10px;
   font-size: 1rem;
   text-align: left;
 }
 
 .author-gallery {
-  column-count: 3;      /* desktop */
-  column-gap: 20px;     /* mezery mezi sloupci */
-  margin: 0 20px;
-  padding: 20px 0;
+  column-count: 1;
+  column-gap: 16px;
+  margin: 0 10px;
+  padding: 10px 0;
 }
 
-.author-gallery .card{
-min-width: 200px;
+.author-gallery .card {
+  min-width: 150px;
 }
 
-@media (max-width: 1024px) {
-  .author-gallery{
-    column-count: 1;    /* tablet */
+/* Footer */
+footer {
+  text-align: center;
+  padding: 16px;
+  background: #f4f4f4;
+  margin-top: 30px;
+}
+
+/* Tablet */
+@media (min-width: 600px) {
+  h1, .page-title {
+    font-size: 2.8rem;
   }
-}
-
-@media (max-width: 600px) {
- .author-profile {
-    flex-direction: column;
-  
+  h2 {
+    font-size: 1.5rem;
   }
-}
-
-  footer {
-    text-align: center;
+  .gallery {
+    column-count: 2;
+    margin: 0 20px;
+    column-gap: 20px;
+  }
+  .author-gallery {
+    column-count: 2;
+    margin: 0 20px;
+    column-gap: 20px;
+  }
+  .author-profile {
+    flex-direction: row;
+    margin: 20px;
+  }
+  .author-bio {
+    min-width: 300px;
     padding: 20px;
-    background-color: #f4f4f4;
-    margin-top: 40px;
   }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  h1, .page-title {
+    font-size: 3rem;
+  }
+  .gallery {
+    column-count: 4;
+  }
+  .author-gallery {
+    column-count: 3;
+  }
+  .author-title {
+    font-size: 2.5rem;
+    margin: 40px;
+  }
+  .author-bio {
+    min-width: 400px;
+  }
+}
