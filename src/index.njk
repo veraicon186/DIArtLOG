@@ -1,0 +1,49 @@
+---
+layout: base.njk
+title: DIArtLOG
+---
+
+<h2>Artistic Dialogues with Nature</h2>
+
+<div class="filters">
+  <button data-filter="all">Vše</button>
+  <button data-filter="krajina">krajina</button>
+  <button data-filter="obloha">obloha</button>
+  <button data-filter="země">země</button>
+  <button data-filter="voda">voda</button>
+  <button data-filter="mořský-život">mořský život</button>
+  <button data-filter="pigmenty">pigmenty</button>
+  <button data-filter="stromy">stromy</button>
+  <button data-filter="klimatická-změna">klimatická změna</button>
+  <button data-filter="geologie">geologie</button>
+  <button data-filter="abstrakce">abstrakce</button>
+</div>
+
+<div class="gallery">
+  {% for work in works %}
+    <div class="card" data-tags="{{ work.tags | join(' ') }}">
+      
+      {% if work.image %}
+        <img src="{{ work.image }}" alt="{{ work.title }}">
+      {% elseif work.video %}
+        <video controls>
+          <source src="{{ work.video }}" type="video/mp4">
+          Váš prohlížeč nepodporuje video tag.
+        </video>
+      {% endif %}
+      
+      <p>
+        <em>{{ work.title }}</em> | 
+        <a href="/authors/{{ work.authorSlug }}/">{{ work.author }}</a>
+      </p>
+      <p>
+        {% if work.yearStart %}
+          {{ work.yearStart }}{% if work.yearEnd %}–{{ work.yearEnd }}{% endif %}
+        {% else %}
+          {{ work.year }}
+        {% endif %}
+        {% if work.technique %}, {{ work.technique }}{% endif %}
+      </p>
+    </div>
+  {% endfor %}
+</div>

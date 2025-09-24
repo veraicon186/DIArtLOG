@@ -1,0 +1,114 @@
+[
+  {
+    "author": "Magdalena Jetelová",
+    "authorSlug": "magdalena-jetelova",
+    "title": "Konverzace 1580",
+    "year": 2018,
+    "technique": "fotografie",
+    "source": "??",
+    "tags": ["landart", "krajina", "geologie", "klimatická-změna"],
+    "image": "/images/Jetelova_1.jpg"
+  },
+  {
+    "author": "Magdalena Jetelová",
+    "authorSlug": "magdalena-jetelova",
+    "title": "Linie 2451",
+    "year": 2018,
+    "technique": "fotografie",
+    "source": "??",
+    "tags": ["landart", "krajina", "geologie", "klimatická-změna"],
+    "image": "/images/Jetelova_2.jpg"
+  },
+  {
+    "author": "Patricie Fexová",
+    "authorSlug": "patricie-fexova",
+    "title": "ze série Krajiny",
+    "year": 2018,
+    "dimensions": "2 x 70x230 cm",
+    "technique": "akryl na plátně",
+    "source": "??",
+    "tags": ["krajina", "obloha", "abstrakce", "země" ],
+    "image": "/images/Fexova_Krajiny.jpg"
+  },
+
+  {
+    "author": "Michal Kindernay",
+    "authorSlug": "michal-kindernay",
+    "title": "Calendarium Caeli – Heliophilia",
+    "year": 2019,
+    "dimensions": "12min",
+    "technique": "video",
+    "source": "ve sbírkách GHMP",
+    "tags": ["obloha", "abstrakce", "klimatická-změna"], 
+    "video": "/videos/Kindernay.mp4"
+  },
+
+  {
+    "author": "Jitka Svobodová",
+    "authorSlug": "jitka-svobodova",
+    "title": "Kmeny stromů",
+    "year": 2020,
+    "technique": "pastel, papír",
+    "tags": ["stromy"], 
+    "image": "/images/Svobodova_1.jpg"
+  }, 
+  {
+
+    "author": "Jitka Svobodová",
+    "authorSlug": "jitka-svobodova",
+    "title": "Stromy",
+    "year": 2020,
+    "technique": "pastel, drát, papír",
+    "tags": ["stromy"], 
+    "image": "/images/Svobodova_1_1.jpg"
+  },
+{
+  "author": "Jitka Svobodová",
+    "authorSlug": "jitka-svobodova",
+    "title": "Stromy ve větru",
+    "year": 1974,
+    "technique": "drát, papír, barva",
+    "tags": ["stromy"], 
+    "image": "/images/Svobodova_3.jpg"
+},
+
+{
+  "author": "Jan Jedlička",
+  "authorSlug": "jan-jedlicka",
+  "title": "Maremma, 250 colori",
+    "year": 2015,
+    "technique": "pigmenty na japanu a plátně",
+    "tags": ["země", "abstrakce", "pigmenty", "geologie"], 
+    "image": "/images/Jedlicka_1.jpg"
+},
+
+{
+  "author": "Jan Jedlička",
+  "authorSlug": "jan-jedlicka",
+  "title": "Velká zelená Praha",
+     "yearStart": 2018,
+    "yearEnd": 2019,
+    "technique": "pigmenty na japanu a plátně",
+    "tags": ["země", "abstrakce", "pigmenty", "geologie"], 
+    "image": "/images/Jedlicka_2.jpg"
+},
+{
+  "author": "Jan Jedlička",
+  "authorSlug": "jan-jedlicka",
+  "title": "200m",
+    "yearStart": 2008,
+    "yearEnd": 2015,
+    "technique": "fotografie, světlotisk ",
+    "tags": ["krajina"], 
+    "image": "/images/Jedlicka_3.jpg"
+}, 
+{
+  "author": "Erika Bornová",
+    "authorSlug": "erika-bornova",
+  "title": "Vodní bytosti",
+    "year": 2020,
+    "technique": "akryl a olejový pastel na papíře",
+    "tags": ["voda", "mořský-život"], 
+    "image": "/images/Bornova_1.jpg"
+}
+]

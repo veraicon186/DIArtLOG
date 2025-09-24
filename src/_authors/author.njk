@@ -1,0 +1,61 @@
+---
+layout: base.njk
+pagination:
+  data: authors
+  size: 1
+  alias: author
+  resolve: values
+permalink: "/authors/{{ author.slug }}/index.html"
+
+eleventyComputed:
+  title: "{{ author.name }}"
+---
+ <h1 class="author-title">{{ author.name }}</h1>
+
+<div class="author-profile">
+
+    <div class="author-bio">
+
+        <p>{{ author.bio }}</p>
+
+
+        {% if author.links %}
+       
+        {% for link in author.links %}
+            <a href="{{ link.url }}" target="_blank">{{ link.label }}</a>
+        {% endfor %}
+      
+        {% endif %}
+    </div>
+
+
+    <div class="author-works">
+        <div class="author-gallery">
+        {% for work in works %}
+            {% if work.authorSlug == author.slug %}
+            <div class="card">
+                {% if work.image %}
+                <img src="{{ work.image }}" alt="{{ work.title }}">
+                {% elseif work.video %}
+                <video controls>
+                    <source src="{{ work.video }}" type="video/mp4">
+                    Váš prohlížeč nepodporuje video tag.
+                </video>
+                {% endif %}
+
+                <p><em>{{ work.title }}</em></p>
+                <p>
+                {% if work.yearStart %}
+                    {{ work.yearStart }}{% if work.yearEnd %}–{{ work.yearEnd }}{% endif %}
+                {% else %}
+                    {{ work.year }}
+                {% endif %}
+                {% if work.technique %}, {{ work.technique }}{% endif %}
+                </p>
+            </div>
+            {% endif %}
+        {% endfor %}
+        </div>
+    </div>
+
+</div>
