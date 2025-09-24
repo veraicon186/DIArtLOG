@@ -130,6 +130,42 @@ h3 {
   text-align: left;
   break-inside: avoid;
 }
+/* popis díla - desctiption */
+
+
+.description p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* počet řádků */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 0.9em;
+  text-overflow: ellipsis;
+  transition: max-height 0.3s ease;
+  max-height: 4.5em; /* cca 3 řádky */
+}
+
+.description.expanded p {
+  -webkit-line-clamp: unset;
+  max-height: none;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  padding: 10;
+  font-size: 0.9em;
+  text-decoration: underline;
+  font-family: "Funnel Display", sans-serif;
+}
+
+.toggle-btn:hover {
+  text-decoration: underline;
+}
+
+
+
 
 .card img,
 .card video {

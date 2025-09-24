@@ -5,6 +5,7 @@ title: DIArtLOG
 
 <h2>Artistic Dialogues with Nature</h2>
 
+
 <div class="filters">
   <button data-filter="all">Vše</button>
   <button data-filter="krajina">krajina</button>
@@ -44,6 +45,13 @@ title: DIArtLOG
         {% endif %}
         {% if work.technique %}, {{ work.technique }}{% endif %}
       </p>
+        {% if work.description %}
+    <div class="description">
+      <p>{{ work.description }}</p>
+      <button class="toggle-btn">více</button>
+    </div>
+  {% endif %}
+
     </div>
   {% endfor %}
 </div>
