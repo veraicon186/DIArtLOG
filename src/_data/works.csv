@@ -1,16 +1,27 @@
-author,authorSlug,title,description,year,yearStart,yearEnd,technique,dimensions,source,tags,image,video,publish
-Magdalena Jetelová,magdalena-jetelova,Konverzace 1580,,2018,,,fotografie,,,"landart, krajina, geologie, klimatická-změna",/images/Jetelova_1.jpg,,TRUE
-Magdalena Jetelová,magdalena-jetelova,Linie 2451,,2018,,,fotografie,,,"landart, krajina, geologie, klimatická-změna",/images/Jetelova_2.jpg,,TRUE
-Patricie Fexová,patricie-fexova,ze série Krajiny,,2018,,,akryl na plátně,2 x 70x230 cm,,"krajina, obloha, abstrakce, země",/images/Fexova_1.jpg,,TRUE
-Michal Kindernay,michal-kindernay,Calendarium Caeli – Heliophilia,"Projekt vznikl časosběrem proměňující se oblohy. Prostřednictvím kompozice kamerových snímků mapuje celý astronomický rok: 24 hodin, 12 měsíců. 1 den přitom ve vertikálně rozvíjené schématu obsahuje 4320 snímků, celý rok – tedy 365 denních sloupců – pak 1 576 800 snímků
+lastName,firstName,authorSlug,title,description,year,yearStart,yearEnd,technique,dimensions,source,tags,image,video,publish
+Bornová,Erika,erika-bornova,Vodní bytosti,,2020,,,akryl a olejový pastel na papíře,,,"voda, mořský-život","/images/Bornova_1.jpg, /images/Bornova_3.jpg",,TRUE
+Bornová,Erika,erika-bornova,Rostliny,,2019,,,akryl a olejový pastel na papíře,,,"voda, mořský-život",/images/Bornova_2.jpg,,TRUE
+Fexová,Patricie,patricie-fexova,ze série Krajiny,,2018,,,akryl na plátně,2 x 70x230 cm,,"krajina, obloha, abstrakce, země",/images/Fexova_1.jpg,,TRUE
+Jedlička,Jan,jan-jedlicka,"Maremma, 250 colori",,2015,,,pigmenty na japanu a plátně,,,"země, abstrakce, pigmenty, geologie",/images/Jedlicka_1.jpg,,TRUE
+Jedlička,Jan,jan-jedlicka,Velká zelená Praha,,,2018,2019,pigmenty na japanu a plátně,,,"země, abstrakce, pigmenty, geologie",/images/Jedlicka_2.jpg,,TRUE
+Jedlička,Jan,jan-jedlicka,200m,,,2008,2015,"fotografie, světlotisk",,,krajina,/images/Jedlicka_3.jpg,,TRUE
+Jetelová,Magdalena,magdalena-jetelova,Konverzace 1580,,2018,,,fotografie,,,"landart, krajina, geologie, klimatická-změna",/images/Jetelova_1.jpg,,TRUE
+Jetelová,Magdalena,magdalena-jetelova,Linie 2451,,2018,,,fotografie,,,"landart, krajina, geologie, klimatická-změna",/images/Jetelova_2.jpg,,TRUE
+Kindernay,Michal,michal-kindernay,Calendarium Caeli – Heliophilia,"Projekt vznikl časosběrem proměňující se oblohy. Prostřednictvím kompozice kamerových snímků mapuje celý astronomický rok: 24 hodin, 12 měsíců. 1 den přitom ve vertikálně rozvíjené schématu obsahuje 4320 snímků, celý rok – tedy 365 denních sloupců – pak 1 576 800 snímků.
 .
 ",2019,,,video,12min,ve sbírkách GHMP,"obloha, abstrakce, klimatická-změna",,/videos/Kindernay.mp4,TRUE
-Jitka Svobodová,jitka-svobodova,Kmeny stromů,,2020,,,"pastel, papír",,,stromy,/images/Svobodova_1.jpg,,TRUE
-Jitka Svobodová,jitka-svobodova,Stromy,,2020,,,"pastel, drát, papír",,,stromy,/images/Svobodova_2.jpg,,TRUE
-Jitka Svobodová,jitka-svobodova,Stromy ve větru,,1974,,,"drát, papír, barva",,,stromy,/images/Svobodova_3.jpg,,TRUE
-Jan Jedlička,jan-jedlicka,"Maremma, 250 colori",,2015,,,pigmenty na japanu a plátně,,,"země, abstrakce, pigmenty, geologie",/images/Jedlicka_1.jpg,,TRUE
-Jan Jedlička,jan-jedlicka,Velká zelená Praha,,,2018,2019,pigmenty na japanu a plátně,,,"země, abstrakce, pigmenty, geologie",/images/Jedlicka_2.jpg,,TRUE
-Jan Jedlička,jan-jedlicka,200m,,,2008,2015,"fotografie, světlotisk",,,krajina,/images/Jedlicka_3.jpg,,TRUE
-Erika Bornová,erika-bornova,Vodní bytosti,,2020,,,akryl a olejový pastel na papíře,,,"voda, mořský-život",/images/Bornova_1.jpg,,TRUE
-Erika Bornová,erika-bornova,Rostliny,,2019,,,akryl a olejový pastel na papíře,,,"voda, mořský-život",/images/Bornova_2.jpg,,TRUE
-Erika Bornová,erika-bornova,Vodní bytosti,,2020,,,akryl a olejový pastel na papíře,,,"voda, mořský-život",/images/Bornova_3.jpg,,TRUE
+Svobodová,Jitka,jitka-svobodova,Kmeny stromů,,2020,,,"pastel, papír",,,stromy,/images/Svobodova_1.jpg,,TRUE
+Svobodová,Jitka,jitka-svobodova,Stromy,,2020,,,"pastel, drát, papír",,,stromy,/images/Svobodova_2.jpg,,TRUE
+Svobodová,Jitka,jitka-svobodova,Stromy ve větru,,1974,,,"drát, papír, barva",,,stromy,/images/Svobodova_3.jpg,,TRUE
+Milde,Kristýna a Marek,milde,Arbomobil,"V Arbomobilu se newyorský taxík proměňuje v živou sochu, jíž prorůstají stromy pocházející ze Severní Ameriky a druhotně dovezené do Evropy.",2025,,,instalace,,,"stromy, město, civilizace",/images/Milde_3.jpg,,TRUE
+Milde,Kristýna a Marek,milde,Motherboards,"Motherboards je série děl z roku 2023, nyní rozšířená pro Kunsthalle Praha. Kombinuje motivy větví a elektrického vedení, dvou kontrastních prvků křižujících nebe v ulicích Brooklynu, kde umělecká dvojice žije. I když strom a elektrický kabel působí na první pohled velmi rozdílně, oba slouží k rozvádění energie. Tím, že je v tomto díle Kristýna a Marek Milde splétají do soudržného vzoru, zdůrazňují jejich společnou roli vodičů primárních sil.
+Původní fotografie získaly digitální postprodukcí a převedením do média tištěných spojů se zářivě zlatým aplikovaným motivem abstraktní, grafickou kvalitu. Vodivost a proudění energie v sérii Motherboards slouží jako metafora provázanosti světa lidí se světem přírody.",2023,,,tištěné spoje,,,"stromy, civilizace, technologie",/images/Milde_4.jpg,,TRUE
+Milde,Kristýna a Marek,milde,Volání lesa,"Volání lesa je animace, která zkoumá hlubokou, podvědomou touhu po spojení s přírodou, vyjádřenou aktem tetování stromů na kůži. Shromážděním fotografií různých tetování s motivem stromů, získaných na základě otevřené výzvy, si umělecká dvojice klade otázku: Pokud se jednotlivci identifikují se stromy, tvoří spolu dohromady les?
+Snová lesní krajina promítaná na stěny galerie vznikla z jednotlivých tetování, z nichž každé je uzlem v síti sdíleného propojení lidí a přírody. Stromy byly uměleckou dvojici pečlivě vybrány tak, aby zahrnovaly listnaté i jehličnaté stromy rostoucí jak v severoamerických, tak v evropských lesích. Účastníci a účastnice veřejné výzvy rovněž sdíleli osobní příběhy, které se k jejich tetování váží a které umožňují ještě hlouběji nahlédnout do vztahu mezi vytetovanými symboly a jejich nositeli.",2025,,,animace,,,stromy,"/images/Milde_1_1.jpg, /images/Milde_1_2.jpg",/videos/Milde.mp4,TRUE
+Milde,Kristýna a Marek,milde,Petrified Times,"Socha byla postupně vytvořena z novinového papíru tak, aby připomínala kmen stromu, kde jednotlivé letokruhy tvoří stránky novin, den po dni pečlivě lepené na sebe. Stejně jako ostatní díla na této výstavě se i Petrified Times snaží znovu propojit naši každodenní zkušenost s komplexními přírodními procesy.
+Tím, že umělci přetvořili celoroční náklad deníku The New York Times zpět v kmen stromu, poukazují na kontrast mezi rychlým zpravodajstvím současné doby a pomalým růstem stromů, který je zdůrazněn pracným procesem vzniku sochy.
+Sochu doplňuje dílo Petrified Parallel, které daný koncept rozšiřuje do dalších médií.
+",,2020,2025,objekt,,,"stromy, informace, civilizace","/images/Milde_2_1.jpg, /images/Milde_2_2.jpg, /images/Milde_2_3.jpg",,works
+Milde,Kristýna a Marek,milde,Petrifies Paralllel,"Projekce doplňuje dílo Petrified Times a pokračuje ve zkoumání způsobů, jakými v moderní době konzumujeme a zpracováváme informace. Během roku 2020, v době pandemie covid-19, skládali Mildeovi každý den básně z titulků deníku The New York Times, které následně nalepili na papír novinového formátu.
+Ze strohých novinových titulků vznikla nadčasová a imaginativní poezie. Pro Kristýnu a Marka Milde se tato každodenní poetická aktivita stala způsobem, jak záplavu negativních informací proměnit v pozitivní afirmaci. Pro instalaci
+v Kunsthalle Praha umělecké duo vytvořilo závěs z 366 plastových obalů, ve kterých jsou noviny doručovány, na nějž se promítá výběr 53 básní, odpovídající počtu týdnů v roce. Instalace je tak vizuálním archivem jednoho roku, který proměňuje každodenní akt čtení novin v poetické zamyšlení nad časem, pamětí a způsobem, jakým lidé reagují na krizi.",,2020,2025,"instalace, projekce",,,,"/images/Milde_2_4.jpg, /images/Milde_2_5.jpg",,TRUE

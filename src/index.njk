@@ -5,7 +5,6 @@ title: DIArtLOG
 
 <h2>Artistic Dialogues with Nature</h2>
 
-
 <div class="filters">
   <button data-filter="all">Vše</button>
   <button data-filter="krajina">krajina</button>
@@ -22,10 +21,22 @@ title: DIArtLOG
 
 <div class="gallery">
   {% for work in works %}
-    <div class="card" data-tags="{{ work.tags | join(' ') }}">
-      
-      {% if work.image %}
-        <img src="{{ work.image }}" alt="{{ work.title }}">
+<div class="card" data-tags="{{ work.tags | replace(', ', ',') | replace(',', ' ') }}">
+      {% if work.images %}
+        {# první obrázek jako náhled #}
+        <a href="{{ work.images[0] }}" class="glightbox" data-gallery="work-{{ work.title | slug }}">
+          <img src="{{ work.images[0] }}" alt="{{ work.title }}">
+        </a>
+
+        {# ostatní obrázky jako skryté odkazy – už se nebudou motat do layoutu #}
+        <div style="display:none;">
+          {% for img in work.images %}
+            {% if not loop.first %}
+              <a href="{{ img }}" class="glightbox" data-gallery="work-{{ work.title | slug }}"></a>
+            {% endif %}
+          {% endfor %}
+        </div>
+
       {% elseif work.video %}
         <video controls>
           <source src="{{ work.video }}" type="video/mp4">
@@ -33,24 +44,31 @@ title: DIArtLOG
         </video>
       {% endif %}
       
-      <p>
-        <em>{{ work.title }}</em> | 
-        <a href="/authors/{{ work.authorSlug }}/">{{ work.author }}</a>
-      </p>
-      <p>
-        {% if work.yearStart %}
-          {{ work.yearStart }}{% if work.yearEnd %}–{{ work.yearEnd }}{% endif %}
-        {% else %}
-          {{ work.year }}
-        {% endif %}
-        {% if work.technique %}, {{ work.technique }}{% endif %}
-      </p>
-        {% if work.description %}
-    <div class="description">
-      <p>{{ work.description }}</p>
-      <button class="toggle-btn">více</button>
-    </div>
-  {% endif %}
+    <p>
+  <em>{{ work.title }}</em> | 
+  <a href="/authors/{{ work.authorSlug }}/">{{ work.authorName }}</a>
+</p>
+
+<p>
+  {% if work.yearStart %}
+    {{ work.yearStart }}{% if work.yearEnd %}–{{ work.yearEnd }}{% endif %}
+  {% else %}
+    {{ work.year | trim }}{% endif %}{% if work.technique %} | {{ work.technique | trim }}{% endif %}
+</p>
+
+
+
+
+
+
+
+  
+      {% if work.description %}
+        <div class="description">
+          <p>{{ work.description }}</p>
+          <button class="toggle-btn">více</button>
+        </div>
+      {% endif %}
 
     </div>
   {% endfor %}

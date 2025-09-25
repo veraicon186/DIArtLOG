@@ -29,6 +29,20 @@
 </footer>
 <script src="/js/filters.js" defer></script>
 <script src="/js/description-toggle.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const lightbox = GLightbox({
+      selector: '.glightbox',
+      loop: true,         // umožní nekonečné listování
+      touchNavigation: true,
+      keyboardNavigation: true,
+    });
+  });
+</script>
+
+
 
 </body>
 </html>

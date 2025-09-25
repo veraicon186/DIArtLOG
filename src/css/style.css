@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 /* Common Breakpoints */
 :root {
   --breakpoint-mobile: 0px;
@@ -11,12 +12,6 @@
   --breakpoint-desktop: 1024px;
   --breakpoint-large: 1440px;
 }
-
-/* Example usage:
-@media (min-width: 600px) { ... }   // Tablet
-@media (min-width: 1024px) { ... }  // Desktop
-@media (min-width: 1440px) { ... }  // Large screens
-*/
 
 /* Base Typography & Layout */
 html {
@@ -40,29 +35,19 @@ h1, .page-title {
   margin: 20px 0 10px;
   color: black;
   text-decoration: none;
-
 }
 
-/* základní nastavení pro všechny odkazy */
-a,
-a:visited {
-  color: #000;            /* černá barva */
+@media (min-width: 600px) {
+  h1, .page-title {
+    font-size: 2.8rem;
+  }
 }
 
-/* interakční stavy */
-a:hover,
-a:active {
-  color: #111;            /* mírně tmavší při hover/active */
-  text-decoration: none;
+@media (min-width: 1024px) {
+  h1, .page-title {
+    font-size: 3rem;
+  }
 }
-
-/* důležité: zachovat přístupnost - viditelný focus pro klávesnici */
-a:focus {
-  outline: 3px solid Highlight; /* nebo jiný kontrastní styl */
-  outline-offset: 2px;
-}
-
-
 
 h2 {
   font-family: "Funnel Display", sans-serif;
@@ -70,6 +55,12 @@ h2 {
   font-weight: 300;
   text-align: center;
   margin: 0;
+}
+
+@media (min-width: 600px) {
+  h2 {
+    font-size: 1.5rem;
+  }
 }
 
 h3 {
@@ -81,7 +72,22 @@ h3 {
   padding: 0 20px;
 }
 
+/* Links */
+a,
+a:visited {
+  color: #000;
+}
 
+a:hover,
+a:active {
+  color: #111;
+  text-decoration: none;
+}
+
+a:focus {
+  outline: 3px solid Highlight;
+  outline-offset: 2px;
+}
 
 /* Filters */
 .filters {
@@ -120,27 +126,48 @@ h3 {
   margin: 0 10px;
 }
 
+@media (min-width: 600px) {
+  .gallery {
+    column-count: 2;
+    margin: 0 20px;
+    column-gap: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery {
+    column-count: 4;
+  }
+}
+
+/* Card */
 .card {
   display: inline-block;
   width: 100%;
-  margin-bottom: 16px;
   background: #fff;
-  border-radius: 8px;
   text-align: left;
   break-inside: avoid;
+  margin: 20px 0 10px 0;
 }
-/* popis díla - desctiption */
 
+.card img,
+.card video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  
+}
 
+/* Description */
 .description p {
   display: -webkit-box;
-  -webkit-line-clamp: 3; /* počet řádků */
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   font-size: 0.9em;
   text-overflow: ellipsis;
   transition: max-height 0.3s ease;
-  max-height: 4.5em; /* cca 3 řádky */
+  max-height: 4.5em;
 }
 
 .description.expanded p {
@@ -163,20 +190,6 @@ h3 {
   text-decoration: underline;
 }
 
-
-
-
-.card img,
-.card video {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-.hidden {
-  display: none;
-}
-
 /* Author Profile */
 .author-title {
   font-family: "Funnel Display", sans-serif;
@@ -185,10 +198,27 @@ h3 {
   margin: 30px 10px 10px;
 }
 
+@media (min-width: 1024px) {
+  .author-title {
+    font-size: 2.5rem;
+    margin: 20px;
+  }
+}
+
 .author-profile {
   display: flex;
   flex-direction: column;
-  margin: 10px;
+}
+
+@media (min-width: 600px) {
+  .author-profile {
+    flex-direction: row;
+    margin: 20px 0;
+  }
+}
+
+.author-works {
+  width: 100%;
 }
 
 .author-bio {
@@ -198,15 +228,96 @@ h3 {
   text-align: left;
 }
 
-.author-gallery {
-  column-count: 1;
-  column-gap: 16px;
-  margin: 0 10px;
-  padding: 10px 0;
+@media (min-width: 600px) {
+  .author-bio {
+    min-width: 300px;
+    padding: 20px;
+  }
 }
 
-.author-gallery .card {
-  min-width: 150px;
+@media (min-width: 1024px) {
+  .author-bio {
+    min-width: 400px;
+  }
+}
+
+/* Author links */
+.author-bio a {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  color: #000;
+  text-decoration: underline;
+}
+
+.author-bio a:hover {
+  color: #111;
+  text-decoration: none;
+}
+
+/* Author Gallery */
+.author-gallery {
+  display: flex;
+  flex-wrap: wrap;  /* dovolí zalomení */
+  gap: 20px;        /* mezery mezi kartami */
+}
+
+.work-card {
+  flex: 1 1 calc(33.333% - 20px); /* max 3 na řádek */
+  box-sizing: border-box;
+  border-top: 1px solid black;
+  padding: 10px;
+  min-width: 250px; /* ochrana, aby se nesmrskly moc */
+}
+
+/* tablety – max 2 vedle sebe */
+@media (max-width: 900px) {
+  .work-card {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+/* mobily – max 1 na řádek */
+@media (max-width: 600px) {
+  .work-card {
+    flex: 1 1 100%;
+  }
+}
+
+
+.work-card h2{
+  text-align: left;
+}
+
+/* Work Gallery (více fotek jednoho díla u autora) */
+/* rodič */
+
+.work-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;           /* mezera mezi náhledy */
+  margin: 12px 0;
+  padding-right: 20px;
+  align-items: flex-start;
+  /* zaručíme, že se chová jako běžný blok (pokud byl uvnitř column-count) */
+  width: 100%;
+}
+
+.work-gallery a {
+  flex: 1 1 180px; /* rozšíří se, ale nezmenší pod 180px */
+  max-width: 400px;
+}
+
+/* obrázky */
+.work-gallery img, video { width:100%; display:block; }
+
+
+
+
+/* Misc */
+.hidden {
+  display: none;
 }
 
 /* Footer */
@@ -215,52 +326,4 @@ footer {
   padding: 16px;
   background: #f4f4f4;
   margin-top: 30px;
-}
-
-/* Tablet */
-@media (min-width: 600px) {
-  h1, .page-title {
-    font-size: 2.8rem;
-  }
-  h2 {
-    font-size: 1.5rem;
-  }
-  .gallery {
-    column-count: 2;
-    margin: 0 20px;
-    column-gap: 20px;
-  }
-  .author-gallery {
-    column-count: 2;
-    margin: 0 20px;
-    column-gap: 20px;
-  }
-  .author-profile {
-    flex-direction: row;
-    margin: 20px;
-  }
-  .author-bio {
-    min-width: 300px;
-    padding: 20px;
-  }
-}
-
-/* Desktop */
-@media (min-width: 1024px) {
-  h1, .page-title {
-    font-size: 3rem;
-  }
-  .gallery {
-    column-count: 4;
-  }
-  .author-gallery {
-    column-count: 3;
-  }
-  .author-title {
-    font-size: 2.5rem;
-    margin: 40px;
-  }
-  .author-bio {
-    min-width: 400px;
-  }
 }

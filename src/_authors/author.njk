@@ -4,58 +4,68 @@ pagination:
   data: authors
   size: 1
   alias: author
-  resolve: values
 permalink: "/authors/{{ author.slug }}/index.html"
 
 eleventyComputed:
   title: "{{ author.name }}"
 ---
- <h1 class="author-title">{{ author.name }}</h1>
+<h1 class="author-title">{{ author.name }}</h1>
 
 <div class="author-profile">
+  <div class="author-bio">
+    <p>{{ author.bio }}</p>
 
-    <div class="author-bio">
+    {% if author.links %}
+      {% for link in author.links %}
+        <a href="{{ link.url }}" target="_blank">{{ link.label }}</a>
+      {% endfor %}
+    {% endif %}
+  </div>
 
-        <p>{{ author.bio }}</p>
+  <div class="author-works">
+    <div class="author-gallery">
+      {% for work in works %}
+        {% if work.authorSlug == author.slug %}
+          <div class="work-card">
+            <h2>{{ work.title }}</h2>
+            <p>
+              {% if work.yearStart %}
+                {{ work.yearStart }}{% if work.yearEnd %}–{{ work.yearEnd }}{% endif %}
+              {% else %}
+                {{ work.year }}
+              {% endif %}
+              {% if work.technique %}, {{ work.technique }}{% endif %}
+            </p>
 
-
-        {% if author.links %}
-       
-        {% for link in author.links %}
-            <a href="{{ link.url }}" target="_blank">{{ link.label }}</a>
-        {% endfor %}
-      
-        {% endif %}
-    </div>
-
-
-    <div class="author-works">
-        <div class="author-gallery">
-        {% for work in works %}
-            {% if work.authorSlug == author.slug %}
-            <div class="card">
-                {% if work.image %}
-                <img src="{{ work.image }}" alt="{{ work.title }}">
-                {% elseif work.video %}
+            {% if work.images %}
+              <div class="work-gallery">
+                {% for img in work.images %}
+                  <a href="{{ img }}" class="glightbox" data-gallery="author-{{ author.slug }}-{{ work.id }}">
+                    <img src="{{ img }}" alt="{{ work.title }}">
+                  </a>
+                {% endfor %}
+              </div>
+            {% elseif work.image %}
+              <div class="work-gallery">
+                <a href="{{ work.image }}" class="glightbox" data-gallery="author-{{ author.slug }}-{{ work.id }}">
+                  <img src="{{ work.image }}" alt="{{ work.title }}">
+                </a>
+              </div>
+            {% elseif work.video %}
+              <div class="work-gallery">
                 <video controls>
-                    <source src="{{ work.video }}" type="video/mp4">
-                    Váš prohlížeč nepodporuje video tag.
+                  <source src="{{ work.video }}" type="video/mp4">
+                  Váš prohlížeč nepodporuje video tag.
                 </video>
-                {% endif %}
-
-                <p><em>{{ work.title }}</em></p>
-                <p>
-                {% if work.yearStart %}
-                    {{ work.yearStart }}{% if work.yearEnd %}–{{ work.yearEnd }}{% endif %}
-                {% else %}
-                    {{ work.year }}
-                {% endif %}
-                {% if work.technique %}, {{ work.technique }}{% endif %}
-                </p>
-            </div>
+              </div>
             {% endif %}
-        {% endfor %}
-        </div>
-    </div>
 
+            {% if work.description %}
+              <p>{{ work.description }}</p>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
 </div>
